@@ -1,0 +1,196 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+overflow-x: hidden; 
+}
+main {
+
+    /* grid-template-areas: 
+    "nav"
+    "menu"
+    "section"
+    "footer"; */
+
+    overflow-x: hidden; 
+}
+
+.nav {
+    grid-area: nav;
+    background-color: aqua;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    padding-right: 40%;
+}
+
+.nav img {
+    height: 7vh;
+    border-radius: 50%;
+}
+
+.menu {
+    display: flex;
+    padding: 1rem;
+    grid-area: menu;
+    gap: 2rem;
+    /* height: 9vh; */
+}
+
+.menu a {
+display: flex;
+align-items: center;
+border: 1px solid black;
+padding: 1rem;
+}
+
+.section {
+    grid-area: section;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: aqua;
+    height: 9vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "menu"
+    "section"
+    "footer";
+
+}
+
+.principal {
+    background-color: aqua;
+}
+
+.paisprincipal {
+    position: relative;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+}
+
+.p1 {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 1rem;  
+}
+.paisprincipal img {
+    height: 9vh;
+    position: absolute;
+    transition: all 0.6s ease;
+    filter: grayscale(100%);
+    max-width: 190px;
+    border-radius: 0%;
+}
+
+.paisprincipal:hover img {
+    transform: translateX(130px);
+    filter: grayscale(0%);
+    border-radius: 50%;
+}
+
+.paisesprincipal {
+    width: 60%;
+}
+
+.textoprincipal {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-right: 2%;
+    text-align: right;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.paises {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    gap: 2rem;
+    padding: 2%; 
+}
+
+.pais {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    gap: 2rem;
+    padding: 2%;
+
+}
+
+.pais button {
+    background-color: aqua;
+}
+
+.pais img {
+    width: 90%;
+}
+
+.rrss {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;   
+    font-size: 2rem; 
+    }
+
+ @media (min-width: 576px) {
+
+.container {
+    grid-template-areas: 
+"nav nav nav"
+"menu section section "
+"footer footer footer";
+
+}
+.menu {
+    flex-direction: column;
+    padding-top: 10vh;
+    
+}
+.menu a {
+    background-color: white;
+}
+
+.principal {
+    background-color: white;
+}
+
+.menu {
+    background-color: aqua;
+}
+
+
+    }
+
+ @media (min-width: 992px) {
+
+.pais {
+    flex-direction: row;
+}
+.pais img {
+    width: 25%;
+}
+    }
